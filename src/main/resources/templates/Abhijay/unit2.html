@@ -1,0 +1,93 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head>
+  <div layout:fragment="metadata" th:remove="tag">
+    <title>Unit 2 FRQ</title>
+  </div>
+</head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body>
+<div layout:fragment="content" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div style="color:var(--text); padding-top:30px; padding-left: 30px">
+    <h1 class="sectionTitle">Unit 2 FRQ</h1>
+    <div class="row justify-content-center">
+      <div>
+                <pre style="color:var(--text)">
+                    <code>
+public class LightSequence {
+// attributes not shown
+
+// The parameter seq is the initial sequence used for the light display
+public LightSequence(String seq) {
+/* implementation not shown */
+}
+
+/** Inserts the string segment in the current sequence,
+* starting at the index ind. Returns the new sequence. */
+public String insertSegment(String segment, int ind) {
+/* implementation not shown */
+}
+
+// Updates the sequence to the value in seq
+public void changeSequence(String seq){
+/* implementation not shown */
+}
+
+// Uses the current sequence to turn the light on and off for the show
+public void display() {
+/* implementation not shown */
+}
+
+}
+                    </code>
+                </pre>
+      </div>
+    </div>
+    <div>
+      <p class="sectionText">(a) Write a statement to create a LightSequence object gradShow that has the initial light sequence "0101 0101 0101".
+      </p>
+      <code>LightSequence gradShow = new LightSequence("0101 0101 0101");</code>
+
+      <p class="sectionText">(b) Write a statement that will call the display method to display the light sequence for the gradShow object.
+      </p>
+      <code>gradShow.display();</code>
+      <p class="codeOutput" th:text="${gradShow}"></p>
+
+      <p class="sectionText">(c) Write a statement that will be used to update the gradShow light sequence to "0011 0011 0011".
+      </p>
+      <code>gradShow.changeSequence("0011 0011 0011");</code>
+      <p class="codeOutput" th:text="${newGradShow}"></p>
+
+      <p class="sectionText">(d) Write a code segment that will call the insertSegment method to insert the segment "1111 1111" in the current sequence for gradShow at index 4. The resulting sequence will be stored in the string resultSeq.
+      </p>
+      <code>resultSeq = gradShow.insertSegment("1111 1111", 4);</code>
+      <p class="codeOutput" th:text="${resultSeq}"></p>
+
+      <p class="sectionText">(e) Assume that the string oldSeq has been properly declared and initialized and contains the string segment. Write a code segment that will remove the first occurrence of segment from oldSeq and store it in the string newSeq. Consider the following examples.
+        <br>If oldSeq is "1100000111" and segment is "11", then "00000111" should be stored in newSeq.
+        <br>If oldSeq is "0000011" and segment is "11", then "00000" should be stored in newSeq.
+        <br>If oldSeq is "1100000111" and segment is "00", then "11000111" should be stored in newSeq.
+      </p>
+      <code>int index = oldSeq.indexOf(segment); <br>
+        String newSeq = oldSeq.substring(0, index) + oldSeq.substring(index + segment.length());</code>
+      <p class="codeOutput" th:text="${newSeq}"></p>
+
+      <p class="sectionText">(f) Two lights will be arranged on a two-dimensional plane. The vertical distance between the two lights is stored in the double variable a. The horizontal distance between the two lights is stored in the double variable b.
+        The straight-line distance between the two lights is given by the formula square root of the quantity a squared plus b squared.
+      </p>
+      <code>System.out.println(Math.sqrt(a*a + b*b));</code>
+      <p class="codeOutput" th:text="${partf}"></p>
+    </div>
+
+  </div>
+
+  <!-- end of body content specific to page -->
+</div>
+</body>
+</html>
