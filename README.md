@@ -6,6 +6,22 @@ The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
+## Week 2
+
+**Release Day Policies**
+Our policy is that everyone has to complete their assigned task and completed it before 6:00 pm on the due date. This will allow us to complete everything and make sure there are no problems within. 
+
+Try to focus on completing the project at least a day before so that we can complete any other problems before the due date. 
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Worked on more management processes and assigned everyone roles. Got issues and scrumboard up to date and past winter break. Also worked on FRQ and individual page. |
+Justin   | Deployment Manager |  Made more progress within the deployment, but is still not finished. However, it is almost done. |
+Kian   | Design Manager | Worked on the CSS with the entire group (Abhijay, Justin, Rohan, Shekar) and made changes and added things to our CSS homepage. Also worked on the wire frame and worked with team to list technicals. He also created the database and the user input for the about page. |
+Rohan   | Technical Officer | Helped teach everyone how the FRQ works and worked on the databases. |
+Shekar   | Github Admin | Worked on the github creating the things like scrum board and try to continue with the Github administrations. Also worked with the rest of the group to do things. |
+
+
 ## Week 1
 [Wire Frame and Technicals](https://docs.google.com/document/d/1XlId0IyD8Gumsi1YGHI7pKbQUzD0qgsNyxq4Hsggdw4/edit?usp=sharing)
 

@@ -1,11 +1,102 @@
-<!DOCTYPE html>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout1}" lang="en">
-<head><div layout:fragment="metadata" th:remove="tag">
-    <meta charset="UTF-8">
-    <title>Title</title></div>
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+
+<head style="text-align: center; color: #9daf9b">
+    <div th:replace="fragments/head1 :: header"></div>
+    <div layout:fragment="metadata"></div>
+    <link th:href="@{/styles/styles.css}" rel="stylesheet" />
 </head>
-<body><div layout:fragment="content" th:remove="tag">
-    <a href="/shekar/light">light</a></div>
+
+<!-- <head> -->
+<div layout:fragment="metadata" th:remove="tag">
+    <title>Shekar About Us Page</title>
+    <style>
+        table, td, th {
+            border: 1px solid white;
+        }
+        td, th {
+            text-align:right;
+        }
+        td:first-child, th:first-child {
+            text-align: left;
+        }
+    </style>
+</div>
+
+<body class="ns-bg">
+<div th:replace="fragments/nav1 :: header"></div>
+<div layout:fragment="content"></div>
+<div layout:fragment="script"></div>
+<h1 style="text-align: center; margin-top: 1%; text-color: white; color: white"><strong id=>Shekar About Us Page</strong></h1>
+
+
+
+<h1 style="color: green; text-color: green; font-size:30px">My name is Shekar and this is my about us page</h1>
+<h1 style="color: green; text-color: green; font-size:30px">I am a collaborator on this project as well</h1>
+<img src="/src/main/static/images/shekar.PNG" th:src="@{/images/shekar.PNG}" width="150px" height="200px" class="face" alt="shekar" style="height:200px; width:150px">
+
+
+<center>
+    <div class="container-fluid">
+        <div class="ns-card">
+            <h1>I love Technology!</h1>
+
+        </div></div></center>
+
+<style>
+    a{
+        color:lightskyblue;
+    }
+
+    table{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    th{
+        width: 400px;
+        text-align: left;
+    }
+
+    td{
+        width: 400px;
+        text-align: left;
+    }
+
+    .button {
+        background: rgba(46, 49, 49, 1); /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button1{
+        border-radius: 12px;
+    }
+
+    .button2{
+        border-radius: 12px;
+    }
+
+    .button3{
+        border-radius: 12px;
+    }
+
+    .button4{
+        border-radius: 12px;
+    }
+
+    .button5{
+        border-radius: 12px;
+    }
+</style>
+
 </body>
 </html>
