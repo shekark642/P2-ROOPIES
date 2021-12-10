@@ -25,11 +25,11 @@ public class Aboutus {
         String web_server = "http://localhost:8080/";
         List<ImageInfo> lii = new ArrayList<>();
 
-        String file0 = "/images/joe5.png";
+        String file0 = "/images/don't panic chicken.jpg";
         lii.add(new ImageInfo(file0, web_server+file0, 12));
         String str = lii.get(0).grayscale();
 
-        String file1 = "/images/joe2.png";
+        String file1 = "/images/ncs_logo.jpg";
         lii.add(new ImageInfo(file1, web_server+file1, 12));
         String str1 = lii.get(1).grayscale();
 
