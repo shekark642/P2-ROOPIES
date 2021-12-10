@@ -34,22 +34,7 @@
 </form>
 
 <center>
-    <div class="container-fluid">
-        <div class="ns-card">
-            <h1>Articles on Fake News</h1>
-            <table>
-                <tr>
-                    <th>Latest News Article Name + URL</th>
-                    <th>Description</th>
-                    <th>Author</th>
-                </tr>
-                <tr th:each="source: ${news}">
-                    <td><a th:href="${source.url}" th:text="${source.title}"></a></td>
-                    <td th:text="${source.description}"></td>
-                    <td th:text="${source.author}"></td>
-                </tr>
-            </table>
-        </div></div></center>
+
 
 <style>
     a{

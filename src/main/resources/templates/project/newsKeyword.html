@@ -10,7 +10,6 @@
 
 <!-- <head> -->
 <div layout:fragment="metadata" th:remove="tag">
-  <title>NewsAPI News newsapi</title>
   <style>
     table, td, th {
       border: 1px solid white;
@@ -28,25 +27,12 @@
 <div th:replace="fragments/nav1 :: header"></div>
 <div layout:fragment="content"></div>
 <div layout:fragment="script"></div>
-<h1 style="text-align: center; margin-top: 1%"><strong id=>NewsAPI News newsapi.org</strong></h1>
-<form style="text-align: center" action="/key" method="GET" id="refreshpage">
-  <button>Refresh!</button>
-</form>
-
-<h3 style="text-align: center">Pick a category</h3>
-<ul style="text-align: center">
-  <a href="key?keyword=science" class="button button1">science</a>
-  <a href="key?keyword=business" class="button button2">business</a>
-  <a href="key?keyword=entertainment" class="button button3">entertainment</a>
-  <a href="key?keyword=health" class="button button4">health</a>
-  <a href="key?keyword=technology" class="button button5">technology</a>
-</ul>
 
 
 <center>
   <div class="container-fluid">
     <div class="ns-card">
-      <h1>Articles on Fake News</h1>
+      <h1>Articles on Technology News</h1>
       <table>
         <tr>
           <th>Latest News Article Name + URL</th>
