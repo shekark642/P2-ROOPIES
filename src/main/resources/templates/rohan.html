@@ -2,10 +2,89 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout1}" lang="en">
 <head><div layout:fragment="metadata" th:remove="tag">
+
     <meta charset="UTF-8">
-    <title>Title</title></div>
+    <title>Rohan About Us</title></div>
 </head>
-<body><div layout:fragment="content" th:remove="tag">
-    <a href="/rohan/light">light</a></div>
+
+<body style="background-color:cornflowerblue"><div layout:fragment="content" th:remove="tag">
+    <a  style="font-size:xxx-large">Kian</a><br>
+    <img src="/src/main/staticin/static/images/bulb_on.jpg" th:src="@{/images/bulb_on.jpg}" width="100" height="auto" id="getImage"><br>
+    <input type="button" onclick="imagefun()" value="Change Image"><br>
+    <a href="/kian/light">FRQ2</a>
+    <a href="https://docs.google.com/document/d/13TFapiPDNY2fzXHpgiX1vqc33jYFRHw3UGsSR5lpk68/edit?usp=sharing">Journal</a>
+    <br><button onclick="getLocation()">Click to get your location using an API</button><br>
+    <input type="text" placeholder="name"><input type="text" placeholder="Are you alive?"><input type="text" placeholder="Are you dead?"><br>
+    <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+    <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+    <table id="productTable">
+        <tr>
+            <td>Name</td>
+            <td>Are you alive?</td>
+            <td>Are you dead?</td>
+        </tr>
+    </table>
+    <p id="demo"></p>
+    <script>
+        const myElement = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                myElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            myElement.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("/images/bulb_on.jpg")) {
+                Image_Id.src = "/images/burnt.jpeg";
+            }
+            else {
+                Image_Id.src = "/images/bulb_on.jpg";
+            }
+
+        }
+
+        function productsAdd() {
+            $("#productTable tbody").append("<tr>" +
+                "<td>Kian</td>" +
+                "<td>Yes</td>" +
+                "<td>No</td>" +
+                "</tr>");
+        }
+
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+        function reloadData(){
+            for (let i = 1; i <= localStorage.clickcount; i++) {
+                productsAdd();
+            }
+        }
+    </script>
+
+    <div>
+        <h2></h2>
+
+    </div>
+</div>
+
 </body>
+
 </html>
