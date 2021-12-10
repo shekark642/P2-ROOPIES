@@ -26,7 +26,7 @@ public class LightController {
         model.addAttribute("n", n);
         model.addAttribute("newSeq", newSeq);
         model.addAttribute("c", c);
-
+        //hello
         return "lightkian"; // returns HTML VIEW (greeting)
     }
 

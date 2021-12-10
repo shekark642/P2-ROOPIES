@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout1}" lang="en">
+      layout:decorate="~{layout}" lang="en">
+
 <head><div layout:fragment="metadata" th:remove="tag">
-    <meta charset="UTF-8">
-    <title>Title</title></div>
-</head>
+    <title>About Rohan</title>
+</div></head>
+
+
 <body><div layout:fragment="content" th:remove="tag">
-    <a href="/rohan/light">light</a></div>
+    <p><a href="/rohan/light">light</a></p>
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro1" class="articles" style="margin: 30px;">
+        <h1 style="font-family:'Courier New'"><strong><center>About Rohan Koshy :D</center></strong></h1>
+    </div>
+    <center><h3 style="font-family:verdana"> I am a senior at Del Norte and currently taking AP Computer Science A. My hobbies include playing soccer and driving. I am a huge Barcelona fan and watch them religiously.
+    </h3></center>
+
+    <head><div layout:fragment="metadata" th:remove="tag">
+        <title>Rohan Journal</title>
+    </div></head>
+
+
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro" class="articles" style="margin: 30px;">
+        <h1><strong><center>Rohan's Journal!</center></strong></h1>
+    </div>
+    <center><iframe width="1000" height="800" src="https://docs.google.com/document/d/13TFapiPDNY2fzXHpgiX1vqc33jYFRHw3UGsSR5lpk68/edit?usp=sharing">
+    </iframe></center>
+
+    <!-- End of body content specific to page -->
+</div>
+<br><button onclick="getLocation()">Click to get your location using an API</button><br>
+<button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+<button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+<button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+<table id="productTable">
+    <tr>
+        <td>Name</td>
+        <td>Do you play video games?</td>
+        <td>Do you like arcade video games?</td>
+    </tr>
+</table>
+<p id="demo"></p>
+<script>
+    const myElement = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            myElement.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        myElement.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function imagefun() {
+        var Image_Id = document.getElementById('getImage');
+        if (Image_Id.src.match("/images/chickenbg.jpg")) {
+            Image_Id.src = "/images/chickenbg.jpeg";
+        }
+        else {
+            Image_Id.src = "/images/bulb_on.jpg";
+        }
+
+    }
+
+    function productsAdd() {
+        $("#productTable tbody").append("<tr>" +
+            "<td>Rohan</td>" +
+            "<td>Yes</td>" +
+            "<td>No</td>" +
+            "</tr>");
+    }
+
+    function clickCounter() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
+    function reloadData(){
+        for (let i = 1; i <= localStorage.clickcount; i++) {
+            productsAdd();
+        }
+    }
+</script>
 </body>
+
 </html>
+
+
