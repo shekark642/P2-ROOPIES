@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Title</title></div>
 </head>
-<body>
-<a href="/justin/light">light</a>
+<body><div layout:fragment="content" th:remove="tag">
+    <a href="/justin/light">light</a></div>
 </body>
 </html>
