@@ -7,30 +7,41 @@
     <title>Kian's About Me Page!</title></div>
 </head>
 
-<body style="background-color:cornflowerblue"><div layout:fragment="content" th:remove="tag">
-    <a  style="font-size:xxx-large">Kian</a><br>
+<body><div layout:fragment="content" th:remove="tag">
+    <link th:href="@{/styles/kianabout.css}" rel="stylesheet" />
+    <div style="z-index: 9;">
+        <p  style="font-size:xxx-large; text-align:center; margin:auto;">Kian</p><br>
+        <div class="row justify-content-center" style="margin: auto;">
+        <div class="column">
+            <a href="/kian/light">Light Sequence Minilab</a>
+            <input type="button" onclick="imagefun()" value="Change Image"><br>
     <img src="/src/main/staticin/static/images/bulb_on.jpg" th:src="@{/images/bulb_on.jpg}" width="100" height="auto" id="getImage"><br>
-    <input type="button" onclick="imagefun()" value="Change Image"><br>
-    <a href="/kian/light">Light Sequence Minilab</a>
+            </div>
+        <div class="column">
+            <div style="text-align:center">
     <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
     <a href="https://github.com/Uhpachee">Github</a>
     <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=Uhpachee">Commits</a>
     <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
     <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Auhpachee">Issues</a>
-
+            </div>
     <br><button onclick="getLocation()">Click to get your location using an API</button><br>
-    <input type="text" placeholder="name"><input type="text" placeholder="Are you alive?"><input type="text" placeholder="Are you dead?"><br>
+            <p id="demo" style="color:whitesmoke"></p>
+            </div>
+        <div class="column">
+    <input type="text" placeholder="Name"><input type="text" placeholder="Are you alive?"><input type="text" placeholder="Are you dead?"><br>
     <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
     <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
     <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
-    <table id="productTable">
+    <table id="productTable" style="color:whitesmoke">
         <tr>
             <td>Name</td>
             <td>Are you alive?</td>
             <td>Are you dead?</td>
         </tr>
     </table>
-    <p id="demo"></p>
+
+            </div></div>
     <script>
         const myElement = document.getElementById("demo");
 
@@ -83,10 +94,58 @@
             }
         }
     </script>
-
-    <div>
-        <h2></h2>
-
+    </div>
+    <div class="stars stack">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
     </div>
 </div>
 
