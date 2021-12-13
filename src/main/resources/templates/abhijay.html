@@ -8,84 +8,86 @@
 </head>
 
 <body style="background-color:lightgreen"><div layout:fragment="content" th:remove="tag">
-    <a  style="font-size:xxx-large">Abhijay</a><br>
-    <img src="/src/main/staticin/static/images/bulb_off.jpg" th:src="@{/images/bulb_off.jpg}" width="100" height="auto" id="getImage"><br>
-    <input type="button" onclick="imagefun()" value="Change Image"><br>
-    <a href="/abhijay/light">Light Sequence Minilab</a>
-    <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
-    <a href="https://github.com/Dubshott">Github</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=Dubshott">Commits</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Adubshott">Issues</a>
-    <br><button onclick="getLocation()">Click to get your location using an API</button><br>
-    <input type="text" placeholder="name"><input type="text" placeholder="Are you my friend?"><input type="text" placeholder="Do you want to be?"><br>
-    <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
-    <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
-    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
-    <table id="productTable">
-        <tr>
-            <td>Name</td>
-            <td>Are you my friend?</td>
-            <td>Do you want to be?</td>
-        </tr>
-    </table>
-    <p id="demo"></p>
-    <script>
-        const myElement = document.getElementById("demo");
+    <div class="abhiabout">
+        <a style="font-size:xxx-large;">Abhijay</a><br>
+        <img src="/src/main/staticin/static/images/bulb_off.jpg" th:src="@{/images/bulb_off.jpg}" width="100" height="auto" id="getImage"><br>
+        <input type="button" onclick="imagefun()" value="Change Image"><br>
+        <a href="/abhijay/light">Light Sequence Minilab</a>
+        <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
+        <a href="https://github.com/Dubshott">Github</a>
+        <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=Dubshott">Commits</a>
+        <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
+        <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Adubshott">Issues</a>
+        <br><button onclick="getLocation()">Click to get your location using an API</button><br>
+        <input type="text" placeholder="name"><input type="text" placeholder="Are you my friend?"><input type="text" placeholder="Do you want to be?"><br>
+        <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+        <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+        <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+        <table id="productTable">
+            <tr>
+                <td>Name</td>
+                <td>Are you my friend?</td>
+                <td>Do you want to be?</td>
+            </tr>
+        </table>
+        <p id="demo"></p>
+        <script>
+            const myElement = document.getElementById("demo");
 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                myElement.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-        function showPosition(position) {
-            myElement.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-        }
-
-        function imagefun() {
-            var Image_Id = document.getElementById('getImage');
-            if (Image_Id.src.match("/images/bulb_off.jpg")) {
-                Image_Id.src = "/images/logo.png";
-            }
-            else {
-                Image_Id.src = "/images/bulb_off.jpg";
-            }
-
-        }
-
-        function productsAdd() {
-            $("#productTable tbody").append("<tr>" +
-                "<td>Abhijay</td>" +
-                "<td>Yes</td>" +
-                "<td>No</td>" +
-                "</tr>");
-        }
-
-        function clickCounter() {
-            if(typeof(Storage) !== "undefined") {
-                if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
                 } else {
-                    localStorage.clickcount = 1;
+                    myElement.innerHTML = "Geolocation is not supported by this browser.";
                 }
-            } else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
             }
-        }
-        function reloadData(){
-            for (let i = 1; i <= localStorage.clickcount; i++) {
-                productsAdd();
+
+            function showPosition(position) {
+                myElement.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
             }
-        }
-    </script>
 
-    <div>
-        <h2></h2>
+            function imagefun() {
+                var Image_Id = document.getElementById('getImage');
+                if (Image_Id.src.match("/images/bulb_off.jpg")) {
+                    Image_Id.src = "/images/logo.png";
+                }
+                else {
+                    Image_Id.src = "/images/bulb_off.jpg";
+                }
 
+            }
+
+            function productsAdd() {
+                $("#productTable tbody").append("<tr>" +
+                    "<td>Abhijay</td>" +
+                    "<td>Yes</td>" +
+                    "<td>No</td>" +
+                    "</tr>");
+            }
+
+            function clickCounter() {
+                if(typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                        localStorage.clickcount = 1;
+                    }
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                }
+            }
+            function reloadData(){
+                for (let i = 1; i <= localStorage.clickcount; i++) {
+                    productsAdd();
+                }
+            }
+        </script>
+
+        <div>
+            <h2></h2>
+
+        </div>
     </div>
 </div>
 

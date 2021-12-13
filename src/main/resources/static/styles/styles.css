@@ -416,3 +416,10 @@ a:hover{
 table, th, td {
   border:2px solid white;
 }
+
+.abhiabout {
+  text-align: center;
+  justify-content: center;
+  position:absolute;
+  top:15%;
+}
