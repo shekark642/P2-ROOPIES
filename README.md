@@ -6,6 +6,16 @@ The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
+## Week 3
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Assigned more issues and got everyone to work. Worked on individual and overall about page and got the frontend done for that. |
+Justin   | Deployment Manager |  Finally finished deployment and the website is up and running now. coolermathgames.ml |
+Kian   | Design Manager | Made more frontend and worked on unit 2 frq and finished that stuff. |
+Rohan   | Technical Officer | Worked on the database and got started on the process for that. |
+Shekar   | Github Admin | Completed the github wiki and worked on the part where he worked on the insights and showed those off. |
+
 ## Week 2
 
 **Release Day Policies**
