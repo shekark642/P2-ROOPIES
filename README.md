@@ -1,10 +1,9 @@
 # Welcome
 Project Idea:
 
-This project can be the database and home of dating sites
+This project can be the database and display screen of a smart mirror. This project can house the software of our smart mirror. We are going to display a website that produces this. We are going to use a high-resolution monitor and display a software website on it using java and data structures.
 
 Group members: [Shekar](https://github.com/jli615), [Sami](https://github.com/RohanKoshy), [Sam](https://github.com/shekark642), [Luca](https://github.com/Dubshott), [Paul](https://github.com/Uhpachee)
-
 
 
 ## Week 1
