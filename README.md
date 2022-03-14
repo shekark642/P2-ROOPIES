@@ -5,9 +5,10 @@ This project can be the database and display screen of a smart mirror. This proj
 
 Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642), [Paul](https://github.com/shekark642)
 
+
 ## Week 1
 
-[Github Wiki](https://github.com/shekark642/M222--slackbots/wiki)
+[Github Wiki](https://shekark642.github.io/M221p2-roopies/)
 
 People | Role | Progress |
 -------------  | -------------- | -------------- |
@@ -30,12 +31,3 @@ ULTIMATE CHECKPOINTS (in some order)
 * Begin assembly
 * Fix any errors or make any improvements
  
-
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shekark642/M221p2-roopies/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
