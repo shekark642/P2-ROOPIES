@@ -9,6 +9,7 @@ Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.co
 ## Week 1
 
 [Github Wiki](https://shekark642.github.io/M221p2-roopies/)
+
 [Scrum Board](https://github.com/shekark642/M221p2-roopies/projects/1)
 
 
