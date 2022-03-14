@@ -5,7 +5,7 @@ This project can be the database and display screen of a smart mirror. This proj
 
 Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642), [Paul](https://github.com/shekark642)
 
-[Github Wiki]([Github Wiki](https://shekark642.github.io/M221p2-roopies/)\
+[Github Wiki](https://shekark642.github.io/M221p2-roopies/)
 
 [Scrum Board](https://github.com/shekark642/M221p2-roopies/projects/1)
 
