@@ -3,7 +3,7 @@ Project Idea:
 
 This project can be the database and display screen of a smart mirror. This project can house the software of our smart mirror. We are going to display a website that produces this. We are going to use a high-resolution monitor and display a software website on it using java and data structures.
 
-Group members: [Shekar](https://github.com/jli615), [Sami](https://github.com/RohanKoshy), [Sam](https://github.com/shekark642), [Luca](https://github.com/Dubshott), [Paul](https://github.com/Uhpachee)
+Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642), [Paul](https://github.com/shekark642)
 
 
 ## Week 1
@@ -30,5 +30,4 @@ ULTIMATE CHECKPOINTS (in some order)
 * Research youtube videos for assembly
 * Begin assembly
 * Fix any errors or make any improvements
-* 
-* 
+ 
