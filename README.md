@@ -17,3 +17,18 @@ Shekar   | Deployment Manager |  made a lot of progress with the deployment. He 
 Sami   | Design Manager | Worked on the CSS with the entire group (Abhijay, Justin, Rohan, Shekar) and made changes and added things to our CSS homepage. Also worked on the wire frame and worked with team to list technicals. |
 Paul   | Technical Officer | Started working with databases and is making progress learning about CRUD and trying to incorporate it with Java and into the project. |
 Luca   | Github Admin | Worked on the github creating the things like scrum board and try to continue with the Github administrations.  |
+
+
+
+ULTIMATE CHECKPOINTS (in some order)
+
+* UI setup
+* Pi retrieved
+* Pi deployment
+* Other physical components retrieved
+* Create blueprints for assembly
+* Research youtube videos for assembly
+* Begin assembly
+* Fix any errors or make any improvements
+* 
+* 
