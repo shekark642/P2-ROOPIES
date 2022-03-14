@@ -10,6 +10,9 @@ Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.co
 
 [Github Wiki](https://shekark642.github.io/M221p2-roopies/)
 
+[Scrum Board](https://github.com/shekark642/M221p2-roopies/projects/1)
+
+
 People | Role | Progress |
 -------------  | -------------- | -------------- |
 Sam  | Scrum Master | Started getting the plans together and managed the team. Gave roles to everyone and gave some ideas that we could do.) |
