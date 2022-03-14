@@ -8,7 +8,7 @@ Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.co
 
 ## Week 1
 
-[Github Wiki](https://github.com/shekark642/M222--slackbots/wiki)
+[Github Wiki](https://shekark642.github.io/M221p2-roopies/)
 
 People | Role | Progress |
 -------------  | -------------- | -------------- |
