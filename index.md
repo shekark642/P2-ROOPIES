@@ -7,6 +7,7 @@ by Samuel Mahjouri, Shekar Krishnamoorthy, Luca Pinto, Paul Bokelman, Sami
 
 The Big M
 
+![20220307_090903 (1)](https://user-images.githubusercontent.com/72888867/160163947-c1b6a844-b2ee-47ee-8795-71a26da97c35.jpg)
 
 ## The Hosting Plan
 
