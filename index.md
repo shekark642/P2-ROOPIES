@@ -5,12 +5,11 @@ by Samuel Mahjouri, Shekar Krishnamoorthy, Luca Pinto, Paul Bokelman, Sami
 
 ## Sponsor 
 
-The Big M
+Mr. Mortensen
 
 ![20220307_090903 (1)](https://user-images.githubusercontent.com/72888867/160163947-c1b6a844-b2ee-47ee-8795-71a26da97c35.jpg)
 
 ## The Hosting Plan
-
 
 We are going to use a raspberry pi 4 model B
 We are going to use a .ct website since it is free to deploy with raspberry pi
