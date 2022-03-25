@@ -34,3 +34,6 @@ n/a
 
 
 ## Data Privacy
+
+<img width="967" alt="Screen Shot 2022-03-25 at 9 41 23 AM" src="https://user-images.githubusercontent.com/72888867/160163794-3f56f9dd-a2dc-4e5c-8b80-bb14f97914b3.png">
+
