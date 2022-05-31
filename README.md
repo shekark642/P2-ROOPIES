@@ -1,7 +1,11 @@
-# Welcome
-Project Idea:
-Hello
-This project can be the database and display screen of a smart mirror. This project can house the software of our smart mirror. We are going to display a website that produces this. We are going to use a high-resolution monitor and display a software website on it using java and data structures.
+## Welcome
+Project Idea: 
+
+Our project is based off the trending NFTs (non refundable tokens). We want to create a platform for our own brand of NFTs, "Build-a-NFT". Users come onto our websites with a base template, from there the user can add features like hats, glasses, shoes, etc. to the base template. Each hat, or customizable feature is unique, meaning no other can have it. If there is a top hat, only one person gets to have access to it. 
+
+There is a digital line to log into the website and actually purchase the NFT, to prevent duplicate items from occuring. We also allow for celebrities to mark an individual feature with the intention of adding "hype" to our site. 
+
+
 
 Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642), [Paul](https://github.com/shekark642)
 
