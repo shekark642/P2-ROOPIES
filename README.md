@@ -7,7 +7,7 @@ There is a digital line to log into the website and actually purchase the NFT, t
 
 
 
-Group members: [Shekar](https://github.com/shekark642), [Sami](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642), [Paul](https://github.com/shekark642)
+Group members: [Shekar](https://github.com/shekark642), [Sam](https://github.com/shekark642), [Luca](https://github.com/shekark642)
 
 
 ## Week 1
