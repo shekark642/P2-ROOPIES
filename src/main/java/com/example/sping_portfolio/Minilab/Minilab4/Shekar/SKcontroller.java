@@ -1,4 +1,6 @@
 package com.example.sping_portfolio.Minilab.Minilab4.Shekar;
+import java.sql.*;
+import java.util.*;
 
 //imports
 
@@ -10,19 +12,48 @@ import org.springframework.ui.Model;
 
 @Controller
 public class SKcontroller {
+
+    public String description = "Matteo Pinto";
     @GetMapping("/backend")
     //@RequestParam pulls data from frontend
-    public String backend(@RequestParam(name="num1", required=false, defaultValue="50") int num1, @RequestParam(name="num2", required=false, defaultValue="72") int num2,
-                      Model model){
+    public String backend (Model model) throws ClassNotFoundException {
 
 
-        summation mySum = new summation(num1);
-        summation2 mySigma = new summation2(num2);
+        ArrayList reviews = new ArrayList();
 
-        model.addAttribute("sum", mySum.findsum());
-        model.addAttribute("sum2", mySigma.sigma());
 
-        //renders  template
+        String connection_string = "jdbc:mysql://127.0.0.1:3306/";
+        Class.forName("com.mysql.jdbc.Driver");
+        try (Connection conn = DriverManager.getConnection(connection_string, "root", "252796md");
+             PreparedStatement ps = conn.prepareStatement("select * from sys.reviews");
+             ResultSet rs = ps.executeQuery()) {
+            System.out.println(rs);
+
+            while (rs.next()) {
+                String desription = rs.getString("description");
+                String name = rs.getString("name");
+                int rating = rs.getInt("rating");
+
+
+                System.out.println(name);
+
+                HashMap mMap = new HashMap();
+
+                mMap.put("description", desription);
+                mMap.put("rating", rating);
+                mMap.put("name", name);
+
+                reviews.add(mMap);
+
+            }
+            model.addAttribute("reviews", reviews);
+        } catch (SQLException e) {
+            // handle the exception
+            System.out.println(e);
+        }
+
+
+
         return "Minilab/ratingsource";
     }
 

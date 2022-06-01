@@ -45,6 +45,13 @@ public class APIcontroller {
         return "project/News";
     }
 
+    // GET request, no parameters
+    @GetMapping("/nft_reviews")
+    public String NFT_Reviews()  {
+        return "hi";
+    }
+
+
     @GetMapping("/key")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String key(@RequestParam(name="keyword", required=false, defaultValue="business") String keyword, Model model) throws IOException, InterruptedException, ParseException {
         // @RequestParam handles required and default values, name and model are class variables, model looking like JSON
