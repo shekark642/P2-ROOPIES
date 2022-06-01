@@ -8,20 +8,53 @@
 
 <body style="background-color: #6084a3;"><div layout:fragment="content" th:remove="tag">
 
-    <table>
-        <tr>
-            <th>NFT Name</th>
-            <th>Description</th>
-            <th>Rating</th>
-        </tr>
-        <tr th:each="review: ${reviews}">
-            <td th:text="${review.name}"></td>
-            <td th:text="${review.description}"></td>
-            <td th:text="${review.rating}"></td>
-        </tr>
-    </table>
+    <div class="contact" style="height: 35vh;">
+        <div class="col-md-6">
+            <h3 style = "padding-top: 30px">Create a password for your NFT! (Numerical)</h3>
+            <p> Type in a score for this news source to rate it</p>
+            <form id="Form" action="" method="GET">
+                <input name="num1" placeholder="Enter the number of characters the password should be" id="num1" type="text">
+                <button>Go</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="contact" style="height: 35vh;">
+        <div class="col-md-6">
+            <h3 style = "padding-top: 30px">Create a password for your NFT! (Alphanumerical)</h3>
+            <p> Type in a score for this news source to rate it</p>
+            <form id="Form" action="" method="GET">
+                <input name="num2" placeholder="Enter the number of characters the password should be" id="num2" type="text">
+                <button>Go</button>
+            </form>
+        </div>
+    </div>
+
+    <center><div class="ns-card">
+        <h1 style="padding-bottom: 20px;"></h1>
+        <table style="width:100%; font-size: 30px;">
+            <tr>
+                <th>Password</th>
+                <th>Given Password</th>
+                <th>Number of digits</th>
+
+            </tr>
+            <tr>
+                <td>Alphanumerical</td>
+                <td><p th:text="${sum}" style="font-size: 30px"></p> </td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td>Numerical</td>
+                <td><p th:text="${sum2}" style="font-size: 30px"></p> </td>
+                <td>0</td>
+
+            </tr>
+
+        </table>
+    </div></center>
 
     <!-- End of body content specific to page -->
 </div></body>
 </html>
-
