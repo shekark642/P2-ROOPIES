@@ -3,12 +3,28 @@
       layout:decorate="~{layout1}" lang="en">
 <head><div layout:fragment="metadata" th:remove="tag">
     <meta charset="UTF-8">
-    <title>Chris Individual</title>
+    <title>Make a NFT page</title>
     <link th:href="@{/styles/styles.css}" rel="stylesheet" /></div></head>
-
 <body style="background-color: #6084a3;"><div layout:fragment="content" th:remove="tag">
 
-    <table>
+
+    <h1 class="addNewHeaders">Add New NFT Rating!</h1>
+
+    <form action="#" th:action="@{/addNFT}" th:object="${nft}" method="post" class="submission-form">
+        <p>
+            <label class="labeltag">Name </label> <input type="text" class="texttags" th:field="*{name}">
+        </p>
+        <p>
+            <label class="labeltag">Description </label> <input type="text" class="texttags">
+        <p>
+        <label class="labeltag">Rating </label> <input type="text" class="texttags" th:field="*{rating}">
+        </p>
+        <p>
+            <input type="submit" id="sendBtn" value="Submit"/>
+        </p>
+    </form>
+    <h1 class="addNewHeaders">Database of NFT Ratings</h1>
+    <table id="database">
         <tr>
             <th>NFT Name</th>
             <th>Description</th>
@@ -20,24 +36,6 @@
             <td th:text="${review.rating}"></td>
         </tr>
     </table>
-
-    <h1>Add New NFT!</h1>
-
-    <form action="#" th:action="@{/addNFT}" th:object="${nft}" method="post">
-        <p>
-            Name: <input type="text" th:field="*{name}">
-        </p>
-        <p>
-            Description: <input type="text" th:field="*{description}">
-        </p>
-        <p>
-            Rating: <input type="text" th:field="*{rating}">
-        </p>
-        <p>
-            <input type="submit" value="Submit"/>
-        </p>
-    </form>
-
 
 </div>
 
