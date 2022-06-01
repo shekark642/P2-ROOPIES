@@ -21,7 +21,26 @@
         </tr>
     </table>
 
+    <h1>Add New NFT!</h1>
+
+    <form action="#" th:action="@{/addNFT}" th:object="${nft}" method="post">
+        <p>
+            Name: <input type="text" th:field="*{name}">
+        </p>
+        <p>
+            Description: <input type="text" th:field="*{description}">
+        </p>
+        <p>
+            Rating: <input type="text" th:field="*{rating}">
+        </p>
+        <p>
+            <input type="submit" value="Submit"/>
+        </p>
+    </form>
+
+
+</div>
+
     <!-- End of body content specific to page -->
 </div></body>
 </html>
-
