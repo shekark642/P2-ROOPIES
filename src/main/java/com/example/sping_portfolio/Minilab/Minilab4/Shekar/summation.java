@@ -15,11 +15,13 @@ public class summation extends backend{
     public int number = 1;
     @Override
     public int findsum() {
+
+       // code starts now
         this.summ = (this.summ + value) / (number+1);
         return summ;
 
-    }
 
+    }
 
     @Override
     public String getMethod(){
