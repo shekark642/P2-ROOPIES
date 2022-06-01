@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+
+    <meta charset="UTF-8">
+    <title>Kian's About Me Page!</title></div>
+</head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <link th:href="@{/styles/kianabout.css}" rel="stylesheet" />
+    <div style="z-index: 9;">
+        <p  style="font-size:xxx-large; text-align:center; margin:auto;">Kian</p><br>
+        <div class="row justify-content-center" style="margin: auto;">
+        <div class="column">
+            <a href="/kian/light">Light Sequence Minilab</a>
+            <input type="button" onclick="imagefun()" value="Change Image"><br>
+    <img src="/src/main/staticin/static/images/bulb_on.jpg" th:src="@{/images/bulb_on.jpg}" width="100" height="auto" id="getImage"><br>
+            </div>
+        <div class="column">
+            <div style="text-align:center">
+    <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
+    <a href="https://github.com/Uhpachee">Github</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=Uhpachee">Commits</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Auhpachee">Issues</a>
+            </div>
+    <br><button onclick="getLocation()">Click to get your location using an API</button><br>
+            <p id="demo" style="color:whitesmoke"></p>
+            </div>
+        <div class="column">
+    <input type="text" placeholder="Name"><input type="text" placeholder="Are you alive?"><input type="text" placeholder="Are you dead?"><br>
+    <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+    <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+    <table id="productTable" style="color:whitesmoke">
+        <tr>
+            <td>Name</td>
+            <td>Are you alive?</td>
+            <td>Are you dead?</td>
+            <help me it burns it BURNRNNNNSSSS/>
+        </tr>
+    </table>
+
+            </div></div>
+    <script>
+        const myElement = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                myElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            myElement.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("/images/bulb_on.jpg")) {
+                Image_Id.src = "/images/burnt.jpeg";
+            }
+            else {
+                Image_Id.src = "/images/bulb_on.jpg";
+            }
+
+        }
+
+        function productsAdd() {
+            $("#productTable tbody").append("<tr>" +
+                "<td>Kian</td>" +
+                "<td>Yes</td>" +
+                "<td>No</td>" +
+                "</tr>");
+        }
+
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+        function reloadData(){
+            for (let i = 1; i <= localStorage.clickcount; i++) {
+                productsAdd();
+            }
+        }
+    </script>
+    </div>
+    <div class="stars stack">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

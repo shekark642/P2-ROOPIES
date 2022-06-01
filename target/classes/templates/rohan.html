@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <meta charset="UTF-8">
+    <title>Rohan Koshy</title></div>
+</head>
+<body style="background-color:lightblue"><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro1" class="articles" style="margin: 30px;">
+        <h1 style="font-family:'Courier New'"><strong><center>About Rohan Koshy :D</center></strong></h1>
+    </div>
+    <center><h3 style="font-family:verdana"> I am a senior at Del Norte and currently taking AP Computer Science A. My hobbies include playing soccer and driving. I am a huge Barcelona fan and watch them religiously.
+    </h3></center>
+    <center><div>
+        <img src="/src/main/staticin/static/images/chickenbg.jpg" th:src="@{/images/chickenbg.jpg}" width="100" height="auto" id="getImage"><br>
+        <input type="button" onclick="image()" value="Change Image"><br>
+
+
+
+
+</div></center>
+    <div>
+        <a href="/rohan/light">FRQ 2</a></div>
+    <head><div layout:fragment="metadata" th:remove="tag">
+        <title>Rohan Journal</title>
+    </div></head>
+
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro" class="articles" style="margin: 30px;">
+        <h1><strong><center>Rohan's Journal!</center></strong></h1>
+    </div>
+    <center><iframe width="1000" height="800" src="https://docs.google.com/document/d/13TFapiPDNY2fzXHpgiX1vqc33jYFRHw3UGsSR5lpk68/edit?usp=sharing">
+    </iframe></center>
+<script>
+    function image() {
+        var Image_Id = document.getElementById('getImage');
+        if (Image_Id.src.match("/images/chickenbg.jpg")) {
+            Image_Id.src = "/images/logo.png";
+        }
+        else {
+            Image_Id.src = "/images/chickenbg.jpg";
+        }
+    }
+</script>
+<!-- End of body content specific to page -->
+</div></body>
+
+</html>

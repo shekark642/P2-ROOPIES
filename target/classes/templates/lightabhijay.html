@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Factorial</title>
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro" class="articles" style="margin: 30px; text-align: center;">
+        <h1 style="font-size: 50px">Unit 2 FRQ</h1>
+        <div>
+            <h1 style="color: lightblue">Original Sequence <span th:text="${s}">1</span></h1>
+        </div>
+        <div>
+            <h1 style="color: yellow">
+                Changed sequence <span th:text="${t}">1</span>
+            </h1>
+        </div>
+        <div>
+            <h1 style="color: black">Inserted sequence <span th:text="${n}">1</span></h1>
+        </div>
+        <div>
+            <h1 style="color: black">New augmented sequence <span th:text="${newSeq}">1</span></h1>
+        </div>
+        <div>
+            <h1 style="color: black">Strait line between point 5.3 and 6.4 <span th:text="${c}">1</span></h1>
+        </div>
+    </div>
+    <!-- End of body content specific to page -->
+
+    <!-- End of body content specific to page -->
+</div></body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+
+    <meta charset="UTF-8">
+    <title>Justin's About Me Page!</title></div>
+</head>
+
+<body style="background-color:cornflowerblue"><div layout:fragment="content" th:remove="tag">
+    <a  style="font-size:xxx-large">Justin</a><br>
+    <img src="/src/main/staticin/static/images/don't panic chicken.jpg" th:src="@{/images/don't panic chicken.jpg}" width="100" height="auto" id="getImage"><br>
+    <input type="button" onclick="imagefun()" value="Change Image"><br>
+    <a href="/justin/light">Light Sequence Minilab</a>
+    <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
+    <a href="https://github.com/https://github.com/jli615">Github</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=jli615">Commits</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
+    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Ajli615">Issues</a>
+    <br><button onclick="getLocation()">Click to get your location using an API</button><br>
+    <input type="text" placeholder="name"><input type="text" placeholder="Are you an athlete?"><input type="text" placeholder="Are you not?"><br>
+    <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+    <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+    <table id="productTable">
+        <tr>
+            <td>Name</td>
+            <td>Are you an athlete?</td>
+            <td>Are you not?</td>
+        </tr>
+    </table>
+    <p id="demo"></p>
+    <script>
+        const myElement = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                myElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            myElement.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function imagefun() {
+            var Image_Id = document.getElementById('getImage');
+            if (Image_Id.src.match("/images/don't panic chicken.jpg")) {
+                Image_Id.src = "/images/burnt.jpeg";
+            }
+            else {
+                Image_Id.src = "/images/don't panic chicken.jpg";
+            }
+
+        }
+
+        function productsAdd() {
+            $("#productTable tbody").append("<tr>" +
+                "<td>Justin</td>" +
+                "<td>Yes</td>" +
+                "<td>No</td>" +
+                "</tr>");
+        }
+
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+        function reloadData(){
+            for (let i = 1; i <= localStorage.clickcount; i++) {
+                productsAdd();
+            }
+        }
+    </script>
+
+    <div>
+        <h2></h2>
+
+    </div>
+</div>
+
+</body>
+
+</html>
+
+

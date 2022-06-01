@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>About Us</title>
+  <link th:href="@{/styles/styles.css}" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/ecb5994ee2.js" crossorigin="anonymous"></script>
+</div>
+  <title>...</title></head>
+
+<body class="about-bg"><div layout:fragment="content" th:remove="tag">
+  <h1 class="about-header">About Us</h1>
+  <p class="about-body"><a href="key?keyword=technology">Click for API</a></p>
+
+  <p class="about-body">Collaborators On This Project</p>
+
+  <div class="row justify-content-center">
+    <div class="column">
+      <img src="/src/main/static/images/don't panic chicken.jpg" th:src="@{/images/}" width="50" height="50" class="face" alt="Sam">
+      <p class="face-name">Sam Mahjouri</p>
+      <p class="face-text">Scrum Master Officer</p>
+      <dl>
+        <a href="/justin">Individual About Us Page</a>
+      </dl>
+      <center><a href="https://github.com/iBraskyy" style="text-decoration: none; color:black;"><i class="git fab fa-github fa-2x"></i></a></center>
+    </div>
+    <div class="column">
+      <img src="/src/main/static/images/ncs_logo.jpg" th:src="@{/images/ncs_logo.jpg}" width="50" height="50" class="face" alt="Shekar">
+      <p class="face-name">Shekar Krishnamoorthy</p>
+      <p class="face-text">Github Manager</p>
+      <dl>
+        <a href="/shekar">Individual About Us Page</a>
+      </dl>
+      <center><a href="https://github.com/shekark642" style="text-decoration: none; color:black;"><i class="git fab fa-github fa-2x"></i></a></center>
+    </div>
+    <div class="column">
+      <img src="/src/main/static/images/chickenbg.jpg" th:src="@{/images/}" width="50" height="50" class="face" alt="Luca">
+      <p class="face-name">Luca Pinto</p>
+      <p class="face-text">Github officer</p>
+      <dl>
+        <a href="/rohan">Individual About Us Page</a>
+      </dl>
+      <center><a href="https://github.com/lucap2527" style="text-decoration: none; color:black;"><i class="git fab fa-github fa-2x"></i></a></center>
+    </div>
+    <div class="column">
+      <img src="/src/main/static/images/bulb_on.jpg" th:src="@{/images/}" width="50" height="50" class="face" alt="Paul">
+      <p class="face-name">Paul Bokelman</p>
+      <p class="face-text">Technical developer</p>
+      <dl>
+        <a href="/kiantransition">Individual About Us Page</a>
+      </dl>
+      <center><a href="https://github.com/" style="text-decoration: none; color:black;"><i class="git fab fa-github fa-2x"></i></a></center>
+    </div>
+    <div class="column">
+      <img src="/src/main/static/images/bulb_off.jpg" th:src="@{/images/bulb_off.jpg}" width="50" height="50" class="face" alt="dylan">
+      <p class="face-name">Abhijay Deevi</p>
+      <p class="face-text">Scrum Master</p>
+      <dl>
+        <a href="/abhijay">Individual About Us Page</a>
+      </dl>
+      <center><a href="https://github.com/Dubshott" style="text-decoration: none; color:black;"><i class="git fab fa-github fa-2x"></i></a></center>
+    </div>
+  </div>
+</div>
+</body>
+</html>
