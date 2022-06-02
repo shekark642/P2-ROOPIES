@@ -38,7 +38,7 @@ abstract class gcf {
     }
 
     //requires findgcf method for all gcf classes
-    public abstract int findgcf();
+    public abstract String findgcf();
 
     //requires getmethod method for all gcf classes
     public abstract String getMethod();

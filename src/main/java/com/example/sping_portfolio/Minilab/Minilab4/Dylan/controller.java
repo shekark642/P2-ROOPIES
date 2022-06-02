@@ -14,14 +14,11 @@ public class controller {
     @GetMapping("/gcf")
     //@RequestParam pulls data from frontend
     public String gcf(@RequestParam(name="num1", required=false, defaultValue="1") int num1,
-                      @RequestParam(name="num2", required=false, defaultValue="1") int num2,
                       Model model){
 
         //list objects
         ArrayList<Object> gcfList = new ArrayList<Object>(1);
-        gcfList.add(new method_for(num1, num2));
-        gcfList.add(new method_while(num1, num2));
-        gcfList.add(new method_recursive(num1, num2));
+        gcfList.add(new method_while(num1));
 
 
         model.addAttribute("gcfList", gcfList);

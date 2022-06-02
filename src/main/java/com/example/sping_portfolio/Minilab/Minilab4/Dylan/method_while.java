@@ -1,41 +1,44 @@
 package com.example.sping_portfolio.Minilab.Minilab4.Dylan;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class method_while extends gcf{
     //variables
     private int x;
     private int num1;
-    private int num2;
+    private String num3;
 
     //constructor
-    public method_while(int num1, int num2) {
+    public method_while(int num1) {
         this.num1 = num1;
-        this.num2 = num2;
+        this.num3 = findgcf();
     }
 
     //required findgcf method from parent
     @Override
-    public int findgcf() {
-        //creates a list of every factor for each of the values
-        ArrayList<Integer> factor1 = factor(this.num1);
-        ArrayList<Integer> factor2 = factor(this.num2);
+    public String findgcf() {
 
-        //stops loop when num1 = num2
-        while(this.num1 != this.num2){
-            //subtracts smaller number from larger number, loops until numbers are equal
-            if (num1 > num2){
-                num1 -= num2;
+        Random rand = new Random();
+        int y=0;
+        String num3 = "";
+        while (y < num1){
+
+            int asciiindex = rand.nextInt(74) + 48;
+            if ( (asciiindex >57 && asciiindex <64) || (asciiindex >91 && asciiindex <96)){
+                y = y - 1;
             }
             else{
-                num2 -= num1;
+                char x = (char) asciiindex;
+                num3 = (num3 + x);
             }
+            y = y + 1;
         }
 
-        return num1;
+        return num3;
     }
 
     @Override
     public String getMethod(){
-        return "While";
+        return "alphanumeric";
     }
 }
