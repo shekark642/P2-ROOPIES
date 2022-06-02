@@ -33,6 +33,7 @@
 
 
 <button onclick="clickButton()">Generate Alien</button>
+    <button onclick="ss()">Take Screenshot</button>
 
 
 <style>
@@ -178,6 +179,20 @@
             addNormalShadow(face);
         }
         //addGlow(face);
+
+
+
+        function ss(){
+            const screenshotTarget = document.body;
+
+            html2canvas(screenshotTarget).then((canvas) => {
+                const base64image = canvas.toDataURL("image/png");
+                window.location.href = base64image;
+            });
+        }
+
+
+
     }
 
 </script>
