@@ -57,6 +57,7 @@ public class SKcontroller {
 
         System.out.println(nft.name);
         System.out.println(nft.rating);
+        System.out.println(nft.description);
 
 
         String connection_string = "jdbc:mysql://127.0.0.1:3306/";
@@ -93,7 +94,7 @@ public class SKcontroller {
             NFT nft = new NFT();
 
             while (rs.next()) {
-                String desription = rs.getString("description");
+                String description = rs.getString("description");
                 String name = rs.getString("name");
                 int rating = rs.getInt("rating");
 
@@ -102,7 +103,7 @@ public class SKcontroller {
 
                 HashMap mMap = new HashMap();
 
-                mMap.put("description", desription);
+                mMap.put("description", description);
                 mMap.put("rating", rating);
                 mMap.put("name", name);
 
