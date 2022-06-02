@@ -423,3 +423,48 @@ table, th, td {
   position:absolute;
   top:15%;
 }
+#bodytag{
+    font-family:sans-serif;
+}
+.submission-form{
+ max-width: 500px;
+ margin:2rem auto;
+ border:2px solid #E74C3C
+ padding:2rem;
+}
+.labeltag{
+ display:block;
+ padding: 1.5rem 0;
+ text-transform:uppercase;
+ font-size:14px;
+}
+.texttags{
+  display:block;
+  width:100%;
+  border:2px solid #2980B9;
+  padding:.25rem;
+}
+#sendBtn{
+ border:0;
+ background:#343050;
+ padding:.5rem;
+ color:white;
+ margin:1rem 0;
+ width:auto;
+ text-transform:uppercase;
+ cursor:pointer;
+ &:hover{
+  background:#3498DB
+ }
+}
+.addNewHeaders{
+margin-bottom: 20px;
+margin-top: 20px;
+text-align:center;
+}
+#database{
+margin-left:auto;
+margin-right:auto;
+width:45%;
+margin-bottom: 20px;
+}
