@@ -18,17 +18,16 @@
     <div class="center-block" style="margin: 2% 3% 3%;">
         <!-- Title -->
         <div class="col-12" style="text-align: center; color: white;">
-            <h1><strong>Abstract Greatest Common Factor</strong></h1>
+            <h1><strong>Create a password for your NFT</strong></h1>
         </div>
 
         <!-- Form and Action -->
         <div class="jumbotron text-center row">
             <!-- Input -->
             <div class="col-md-6">
-                <h3>Type Two Numbers</h3>
+                <h3>Type the number of digits you want the password to be</h3>
                 <form id="gcfForm" action="" method="GET">
                     <input name="num1" id="num1" type="text">
-                    <input name="num2" id="num2" type="text">
                     <button>Go!</button>
                 </form>
             </div>
@@ -37,9 +36,8 @@
                 <h1>Outputs</h1>
                 <table class="mx-auto">
                     <tr>
-                        <th scope="col">Method</th>
-                        <th scope="col">GCF</th>
-                        <th scope="col">Time</th>
+                        <th scope="col">Type of Password</th>
+                        <th scope="col">Password:</th>
                     </tr>
                     <tr th:each="gcf : ${gcfList}">
                         <td th:text="${gcf.getMethod()}"></td>
