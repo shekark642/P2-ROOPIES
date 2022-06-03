@@ -53,7 +53,7 @@ class NFT {
 public class SKcontroller {
 
     @PostMapping("/addNFT")
-    public String processForm(NFT nft ) throws ClassNotFoundException, URISyntaxException, IOException {
+    public String processForm(NFT nft, Model model ) throws ClassNotFoundException, URISyntaxException, IOException {
 
         System.out.println(nft.name);
         System.out.println(nft.rating);
@@ -73,6 +73,8 @@ public class SKcontroller {
             // handle the exception
             System.out.println(e);
         }
+
+        this.add_nft(model);
         return "Minilab/return_nft_home";
     }
 
@@ -99,8 +101,6 @@ public class SKcontroller {
                 int rating = rs.getInt("rating");
 
 
-                System.out.println(name);
-
                 HashMap mMap = new HashMap();
 
                 mMap.put("description", description);
@@ -117,5 +117,44 @@ public class SKcontroller {
             System.out.println(e);
         }
         return "Minilab/ratingsource";
+    }
+
+    @GetMapping("/addNeft")
+    //@RequestParam pulls data from frontend
+    public void add_nft(Model model) throws ClassNotFoundException {
+
+
+        System.out.println("trying to add coutn of submission");
+        String connection_string = "jdbc:mysql://127.0.0.1:3306/";
+        Class.forName("com.mysql.jdbc.Driver");
+        try (Connection conn = DriverManager.getConnection(connection_string, "root", "252796md");
+             PreparedStatement ps = conn.prepareStatement("select submission_count from sys.submissions");
+             ResultSet rs = ps.executeQuery()) {
+            System.out.println(rs);
+
+            while (rs.next()) {
+                int submission_count = rs.getInt("submission_count");
+                model.addAttribute("submission_count", submission_count);
+
+                System.out.println("submission count is " + submission_count);
+                String query = "update sys.submissions set submission_count = submission_count + 1";
+                System.out.println(query);
+
+
+                try {
+                    PreparedStatement ps2 = conn.prepareStatement(query);
+                    ps2.executeUpdate();
+                } catch (SQLException e) {
+                    // handle the exception
+                    System.out.println(e);
+                }
+
+            }
+
+        } catch (SQLException e) {
+            // handle the exception
+            System.out.println(e);
+        }
+        System.out.println("submission count returned ");
     }
 }
